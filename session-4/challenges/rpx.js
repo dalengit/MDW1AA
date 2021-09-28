@@ -1,9 +1,7 @@
 /* rock, paper, scissors 
-
 You need to accept the user's choice (which for now can be stored in a variable)
 The computer choice can be derived from the 'Math.random()' method which reutrn a number
 between 0 and 1.
-
 Log the result and the choices for both user and computer. */
 
 // Input validation 
