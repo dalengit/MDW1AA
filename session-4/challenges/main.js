@@ -52,3 +52,12 @@ const bear = zoo?.bears?.[0];
 console.log(bear);
 
 zoo.describe?.();
+
+// ------------- Scope --------------
+let num = 1; 
+
+if (num > 0) {
+    console.log("Num inside is", num);
+}
+
+console.log("Num outside is", num);

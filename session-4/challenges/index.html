@@ -7,6 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="main.js"></script>
-</body>
+    <!-- <script src="main.js"></script> -->
+    <script src="rpx.js"></script>
+    <!-- <script src="functions.js"></script> -->
+
+    <!-- Create input -->
+    <h1>Rock, Paper, Scissors</h1>
+
+    <label for="userinput">Rock, paper, scissors?</label>
+    <input type="text" id="user-input" name="user-input" required>
+    <button type='submit' onclick="start()">Submit</button>
+
+    <p>Computer's choice</p>
+    <div id="computer-choice"></div>
+
+    <p>Players choice</p>
+    <div id="player-choice"></div>
+
+    <p>Result</p>
+    <div id='winner'></div>
+ </body>
 </html>
