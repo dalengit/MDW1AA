@@ -52,3 +52,9 @@ function play () {
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 };
+
+// Play Again function
+function playAgain () {
+    location.reload();
+    return false;
+}

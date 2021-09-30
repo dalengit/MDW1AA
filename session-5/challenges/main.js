@@ -91,6 +91,64 @@ try {
     value = 0;
 };
 
+// -------------- More Operators --------------
 
+// REST Operator 
+const createPersonObject = (firstName, lastName) => {
+    return {
+        fullName: `${firstName} ${lastName}`
+    };
+};
 
+console.log(createPersonObject("John", "Doe"));
 
+const createPersonObjectWithRest = (firstName, lastName, ...details) => {
+    console.log( `firstName ${firstName}, Details: ${details}`,
+    details)
+};
+
+// Spread Operator 
+// Deep and Shallow Copy
+const numbers = [0, 1, 2, 3];
+
+// Copies references
+const copyOfNumbers = numbers; 
+
+// Both are now 99 at position 0:
+copyOfNumbers[0] = 99; 
+
+console.log("Numbers", numbers, "CopyOfNumbers", copyOfNumbers);
+
+// Copy with spread operator
+const copyOfNumbersES6 = [...numbers];
+
+copyOfNumbersES6[0] = 77;
+console.log("Numbers", numbers, "CopyOfNumbersES6", copyOfNumbersES6);
+
+// Objects: 
+const person = {
+    name: "John", 
+    address: {
+        places: ["A", "B"],
+        coordinates: {
+            long: 99,
+            lat: 88.
+        },
+    },
+};
+
+// ES6 copy (spread operator): 
+const copiedPerson = { ...person };
+
+copiedPerson.name = 'Foo';
+
+// Shallow Copy be careful:
+copiedPerson.address.places.push("C");
+
+console.log(person, copiedPerson);
+
+// JSON Parse/Stringify - Deep copy: 
+const personStr = JSON.stringify(person);
+const copiedPersonStr = JSON.parse(personStr);
+
+console.log(personStr, copiedPersonStr);
