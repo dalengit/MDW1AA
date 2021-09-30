@@ -53,3 +53,7 @@ const formattedPerson = formatPerson({
     lastName: "Seiger",
     age: 23,
 });
+
+// SRP - Single Responsibility Principle 
+// KISS - Keep it simple stupid 
+// DRY - Dont repeat yourself
