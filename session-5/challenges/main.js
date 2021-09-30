@@ -69,3 +69,28 @@ const makeCoffee = (
   };
   
   console.log(makeCoffee(coffeeType, coffeeOptions));
+
+// Error Handling: 
+
+const divideNumbers = (first, second) => {
+
+    if (second === 0) {
+        throw new Error("Bruh");
+    }
+    return first/second; 
+};
+
+try {
+    const dividedValue = divideNumbers(10, 0);
+    const value = `${dividedValue}`;
+    
+    console.log("divideNumbers =>", value);
+} catch (err) {
+    // Handle error gracefully with a default 
+    console.error("Bruh momento")
+    value = 0;
+};
+
+
+
+
