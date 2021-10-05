@@ -95,17 +95,46 @@ try {
 
 // REST Operator 
 const createPersonObject = (firstName, lastName) => {
-    return {
-        fullName: `${firstName} ${lastName}`
-    };
+  return {
+    fullName: `${firstName} ${lastName}`,
+  };
 };
 
 console.log(createPersonObject("John", "Doe"));
 
 const createPersonObjectWithRest = (firstName, lastName, ...details) => {
-    console.log( `firstName ${firstName}, Details: ${details}`,
-    details)
+  console.log(
+    `createPersonObjectWithRest: firstName ${firstName}, Details: ${details}`,
+    details
+  );
+
+  // Destructuring:
+  const [street, city, postCode, phone, nino] = details;
+
+  const person = {
+    firstName,
+    lastName,
+    addressLine1: street,
+    city,
+    postCode,
+    phone,
+    nationalInsuranceNumber: nino,
+  };
+
+  return person;
 };
+
+console.log(
+  createPersonObjectWithRest(
+    "John",
+    "Rest",
+    "1st Street",
+    "Manchester",
+    "M2",
+    "0987655433",
+    "223432421342423423"
+  )
+);
 
 // Spread Operator 
 // Deep and Shallow Copy
