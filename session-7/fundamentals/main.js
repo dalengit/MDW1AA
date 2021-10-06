@@ -103,3 +103,7 @@ const addNonPure = (num1, num2) => {
 };
 
 console.log(addNonPure(5, 5));
+
+// Modularisation 
+// Refer to customer/basket/courier.js //calc/main-calc.js
+
