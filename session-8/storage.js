@@ -29,3 +29,7 @@ const item = {
 
 localStorage.setItem(JSON.stringify(item));
 
+const productFrom = JSON.parse(localStorage.getItem("item"));
+
+console.log(productFrom);
+
