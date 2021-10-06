@@ -27,9 +27,27 @@ const item = {
     price: 5,
 }
 
-localStorage.setItem(JSON.stringify(item));
+localStorage.setItem("items", JSON.stringify(item));
 
 const productFrom = JSON.parse(localStorage.getItem("item"));
 
 console.log(productFrom);
 
+// Remove items 
+localStorage.removeItem("name");
+
+// Session storage 
+
+// Check if sessionstorage exists - do the same for local 
+if (sessionStorage) {
+    sessionStorage;
+}
+
+// Also have set and get methods 
+sessionStorage.setItem("id", 1297)
+
+// Same principles apply for array and objects in session storage 
+
+// Cookies: 
+// Create cookie 
+document.cookie = `name=John Doe; expire=` + new Date(2025, 0, 1).toUTCString();
