@@ -1,6 +1,7 @@
 {
   "name": "npm-intro",
   "version": "1.0.0",
+  "type": "module",
   "description": "npm-intro",
   "main": "index.js",
   "scripts": {
@@ -10,5 +11,8 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }
