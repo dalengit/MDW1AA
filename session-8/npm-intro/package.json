@@ -1,0 +1,14 @@
+{
+  "name": "npm-intro",
+  "version": "1.0.0",
+  "description": "npm-intro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dalen Chan",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
