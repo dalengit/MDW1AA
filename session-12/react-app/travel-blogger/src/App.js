@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 // Import pages 
 import AllTravelBlogs from './pages/AllTravelBlogs';
 import BucketList from './pages/BucketList';
@@ -7,17 +7,19 @@ import NewTravelBlog from './pages/NewTravelBlog';
 const App = () => {
   return (
     <div>
-      <Route>
-        <AllTravelBlogs />
-      </Route>
+      <Switch>
+        <Route route path="/" exact>
+          <AllTravelBlogs />
+        </Route>
 
-      <Route>
-        <NewTravelBlog />
-      </Route>
+        <Route route path="/new-travel-blog">
+          <NewTravelBlog />
+        </Route>
 
-      <Route>
-        <BucketList />
-      </Route>
+        <Route>
+          <BucketList route path="/bucket-list"/>
+        </Route>
+      </Switch>
     </div>
   );
 }
