@@ -3,10 +3,12 @@ import { Route, Switch } from 'react-router-dom';
 import AllTravelBlogs from './pages/AllTravelBlogs';
 import BucketList from './pages/BucketList';
 import NewTravelBlog from './pages/NewTravelBlog';
+import MainNavigation from './components/layout/MainNavigation';
 
 const App = () => {
   return (
     <div>
+      <MainNavigation />
       <Switch>
         <Route route path="/" exact>
           <AllTravelBlogs />
