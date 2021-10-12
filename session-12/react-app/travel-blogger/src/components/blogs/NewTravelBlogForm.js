@@ -2,7 +2,7 @@ import { useRef }from 'react';
 import Card from '../ui/Card';
 import classes from './NewTravelBlogForm.module.css';
 
-// https://react-travel-blogger-default-rtdb.europe-west1.firebasedatabase.app/
+
 
 const NewTravelBlogForm = ({ onAddTravelBlog }) => {
     const titleInputRef = useRef();
@@ -31,6 +31,8 @@ const NewTravelBlogForm = ({ onAddTravelBlog }) => {
         };
 
         console.log(newTravelBlog);
+
+        onAddTravelBlog(newTravelBlog);
     };
 
 
