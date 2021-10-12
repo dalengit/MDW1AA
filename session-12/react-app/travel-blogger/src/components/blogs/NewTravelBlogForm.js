@@ -22,6 +22,14 @@ const NewTravelBlogForm = () => {
                     <label htmlFor="city">City</label>
                     <input type="text" id="city" required />
                 </div>
+                <div className={ classes.control }>
+                    <label htmlFor="description">Description</label>
+                    <textarea id="description" rows="5" required />
+                </div>
+
+                <div className={ classes.actions }>
+                    <button>Add Blog</button>
+                </div>
             </form>
         </Card>
     );
