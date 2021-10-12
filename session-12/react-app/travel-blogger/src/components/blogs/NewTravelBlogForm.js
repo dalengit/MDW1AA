@@ -13,7 +13,22 @@ const NewTravelBlogForm = () => {
         // Prevent refresh on submit
         event.preventDefault();
 
+        const enteredTitle = titleInputRef.current.value;
+        const enteredImageUrl = imageInputRef.current.value;
+        const enteredAddress = addressInputRef.current.value;
+        const enteredCity = cityInputRef.current.value;
+        const enteredDescription = descriptionRef.current.value;
 
+        // Dynamic object
+        const newTravelBlog = {
+            title: enteredTitle,
+            image: enteredImageUrl,
+            address: enteredAddress,
+            city: enteredCity,
+            description: enteredDescription,
+        };
+
+        console.log(newTravelBlog);
     };
 
 
