@@ -2,7 +2,9 @@ import { useRef }from 'react';
 import Card from '../ui/Card';
 import classes from './NewTravelBlogForm.module.css';
 
-const NewTravelBlogForm = () => {
+// https://react-travel-blogger-default-rtdb.europe-west1.firebasedatabase.app/
+
+const NewTravelBlogForm = ({ onAddTravelBlog }) => {
     const titleInputRef = useRef();
     const imageInputRef = useRef();
     const addressInputRef = useRef();
@@ -19,7 +21,7 @@ const NewTravelBlogForm = () => {
         const enteredCity = cityInputRef.current.value;
         const enteredDescription = descriptionRef.current.value;
 
-        // Dynamic object
+        // Dynamic object which gets inserted into the database
         const newTravelBlog = {
             title: enteredTitle,
             image: enteredImageUrl,
