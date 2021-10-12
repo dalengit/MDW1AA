@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 
+// Import CSS 
+import classes from './MainNavigation.module.css';
+
 const MainNavigation = () => {
     return (
         <header>
