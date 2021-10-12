@@ -6,8 +6,8 @@ import classes from './MainNavigation.module.css';
 const MainNavigation = () => {
     return (
         <header className={ classes.header }>
-            <div>Travel Blogger</div>
-            <nav>
+            <div className={ classes.logo }>Travel Blogger</div>
+            <nav className={ classes.nav }>
                 <ul>
                     <li>
                         <Link to="/">All Travel Blogs</Link>
