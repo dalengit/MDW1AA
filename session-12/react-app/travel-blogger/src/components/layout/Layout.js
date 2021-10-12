@@ -2,12 +2,12 @@ import React from 'react';
 import MainNavigation from './MainNavigation';
 import classes from './Layout.module.css';
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
     return (
         <div>
             <MainNavigation />
 
-            <main className={ classes.main }></main>
+            <main className={ classes.main }>{ children }</main>
         </div>
     );
 };
