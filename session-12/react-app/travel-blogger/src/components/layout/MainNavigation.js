@@ -5,7 +5,7 @@ import classes from './MainNavigation.module.css';
 
 const MainNavigation = () => {
     return (
-        <header>
+        <header className={ classes.header }>
             <div>Travel Blogger</div>
             <nav>
                 <ul>
