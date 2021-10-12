@@ -1,7 +1,9 @@
-import React from 'react'
+import { useHistory } from 'react-router-dom';
 import NewTravelBlogForm from '../components/blogs/NewTravelBlogForm';
 
 const NewTravelBlog = () => {
+
+    const history = useHistory();
 
     const addNewTravelBlogHandler = (newBlogData) => {
         const apiURL = process.env.REACT_APP_TRAVEL_API_URL;
@@ -19,6 +21,10 @@ const NewTravelBlog = () => {
             },
 
 
+        })
+        
+        .then(() => {
+            history.replace("/");
         });
     };
 
